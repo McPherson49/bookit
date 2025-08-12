@@ -13,10 +13,10 @@ const RoomPage = async ({ params }) => {
     return <Heading title='Room Not Found' />;
   }
 
-  const bucketId = process.env.NEXT_PUBLIC_APPWRITE_STORAGE_BUCKET_ROOMS;
+  const bucketId = process.env.NEXT_PUBLIC_APPWRITE_ROOMS_STORAGE_BUCKET;
   const projectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT;
 
-  const imageUrl = `https://cloud.appwrite.io/v1/storage/buckets/${bucketId}/files/${room.image}/view?project=${projectId}`;
+  const imageUrl = `https://nyc.cloud.appwrite.io/v1/storage/buckets/${bucketId}/files/${room.image}/view?project=${projectId}`;
 
   const imageSrc = room.image ? imageUrl : '/images/no-image.jpg';
 
